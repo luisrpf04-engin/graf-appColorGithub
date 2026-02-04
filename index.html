@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Profesional de Colores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+
+                    <div class="d-flex justify-content-end mb-2">
+                        <button id="themeToggle" class="btn btn-sm btn-outline-light">Modo claro</button>
+                    </div>
+
+                    <h2 class="text-center fw-bold mb-1">Selector de Color</h2>
+                    <p class="text-center text-muted mb-4">Ajusta RGB, usa HEX o el selector visual</p>
+
+                    <div class="text-center mb-4">
+                        <input type="color" id="colorPicker" value="#000000" class="color-picker">
+                    </div>
+
+                    <div id="colorBox" class="color-preview mb-3"></div>
+
+                    <h6 class="mt-4">Colores recientes</h6>
+                    <div id="colorHistory" class="d-flex flex-wrap gap-2 mb-4"></div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="mb-3">Controles RGB</h5>
+
+                            <label class="form-label">Rojo: <span id="rValue">0</span></label>
+                            <input type="range" class="form-range slider-red" id="red" min="0" max="255" value="0">
+
+                            <label class="form-label">Verde: <span id="gValue">0</span></label>
+                            <input type="range" class="form-range slider-green" id="green" min="0" max="255" value="0">
+
+                            <label class="form-label">Azul: <span id="bValue">0</span></label>
+                            <input type="range" class="form-range slider-blue" id="blue" min="0" max="255" value="0">
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5 class="mb-3">Valores del Color</h5>
+
+                            <div class="card p-3 shadow-sm mb-3">
+                                <strong>RGB</strong>
+                                <div id="rgbText" class="value-box">rgb(0, 0, 0)</div>
+                            </div>
+
+                            <div class="card p-3 shadow-sm mb-3">
+                                <strong>HEX</strong>
+                                <div id="hexText" class="value-box">#000000</div>
+                            </div>
+
+                            <label class="form-label">Editar HEX</label>
+                            <input type="text" id="hexInput" class="form-control" placeholder="#FF5733">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="text-center text-muted small mt-4">Herramienta interactiva de colores RGB & HEX</p>
+
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
